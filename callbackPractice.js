@@ -25,6 +25,9 @@ and what you should write is the favNum function that makes the code above work,
 
 
   //Code Here for first
+var first = function (inputArray, callback) {
+  callback(inputArray[0]);
+};
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
