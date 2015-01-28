@@ -113,6 +113,17 @@ contains(names, 'Colt', function(result){
 
 
     //Code Here for uniq
+var uniq = function(inputArray, cb) {
+    for(var i = 0; i < inputArray.length; i++) {
+        for (var j = i + 1; j < inputArray.length; j++) {
+            if (inputArray[j] === inputArray[i]) {
+                inputArray.splice(j, 1);
+            }
+        }
+    }
+    cb(inputArray);
+};
+
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
